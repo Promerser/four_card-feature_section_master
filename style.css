@@ -1,0 +1,122 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+@font-face {
+    font-family: Poppins;
+    font-weight: 200;
+    src: url(fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    font-weight: 400;
+    src: url(fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    font-weight: 600;
+    src: url(fonts/Poppins/Poppins-SemiBold.ttf);
+}
+*{
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Very-Light-Gray);
+    /* background-color: var(--Cyan); */
+    font-family: Poppins;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+h1{
+    color: var();
+    font-weight: 200;
+    font-size: 24px;
+}
+h2{
+    font-weight: 600;
+    font-size: 24px;
+    padding-bottom: 12px;
+}
+main p{
+    font-size: 15px;
+    text-align: center;
+    width: 300px;
+    color: var(--Grayish-Blue);
+}
+div.grid{
+    display: grid;
+    grid-template-areas: 
+    "a"
+    "b"
+    "c"
+    "d";
+    gap: 32px;
+    margin-bottom: 80px;
+}
+div.block{
+    box-shadow:  0px 15px 10px 1px hsl(229, 6%, 90%);
+    padding: 25px;
+    height: 220px;
+    width: 300px;
+    border-radius: 5px;
+    background-color: var(--white);
+}
+h3{
+    font-size: 20px;
+}
+.block p{
+    /* width: 250px; */
+    font-size: 13px;
+    color: var(--Grayish-Blue);
+    margin-bottom: 30px;
+}
+div.img{
+    display: flex;
+    justify-content: flex-end;
+}
+div.a{
+    grid-area: a;
+    border-top: 5px solid var(--Cyan);
+}
+div.b{
+    grid-area: b;
+    border-top: 5px solid var(--Red);
+}
+div.c{
+    grid-area: c;
+    border-top: 5px solid var(--Orange);
+}
+div.d{
+    grid-area: d;
+    border-top: 5px solid var(--Blue);
+}
+@media screen and (min-width: 1440px){
+    div.grid{
+        grid-template-areas: 
+        ". b ."
+        "a b d"
+        "a c d"
+        ". c .";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+}
