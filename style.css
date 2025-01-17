@@ -110,6 +110,15 @@ div.d{
     border-top: 5px solid var(--Blue);
 }
 @media screen and (min-width: 1440px){
+    h1{
+        font-size: 35px;
+    }
+    h2{
+        font-size: 35px;
+    }
+    main p{
+        width: 500px;
+    }
     div.grid{
         grid-template-areas: 
         ". b ."
@@ -118,5 +127,9 @@ div.d{
         ". c .";
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    div.block{
+        width: 340px;
+        padding: 30px;
     }
 }
